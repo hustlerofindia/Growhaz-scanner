@@ -54,7 +54,7 @@ jobs:
           REPORT_ID: ${{ github.event.inputs.report_id || secrets.REPORT_ID }}
           CALLBACK_URL: ${{ secrets.CALLBACK_URL }}  # For out-of-band testing (optional)
         run: |
-          python s3cure3.py "${{ github.event.inputs.target_url }}" \
+          python Scanner/s3cure3.py "${{ github.event.inputs.target_url }}" \
             --report-id "$REPORT_ID" \
             --login "${{ github.event.inputs.login_credential }}" \
             --password "${{ github.event.inputs.login_password }}"
