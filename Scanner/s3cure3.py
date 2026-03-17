@@ -1395,7 +1395,7 @@ class SecurityTester:
                     }
                 # Check for DOM-based XSS indicators (simplified)
                 if 'alert' in resp.text and payload in resp.text:
-                    return {"type": "vulnerable", ...}
+                    return {"type": "vulnerable"}
                 return {"type": "secure"}
             except Exception as e:
                 return {"type": "error", "error": str(e), "endpoint": endpoint}
